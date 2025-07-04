@@ -99,3 +99,103 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* Minecraft-themed styles */
+@layer components {
+  .minecraft-card {
+    @apply bg-gradient-to-br from-green-900 via-green-800 to-green-700 border-4 border-green-600 shadow-2xl;
+    background-image:
+      linear-gradient(45deg, rgba(34, 197, 94, 0.1) 25%, transparent 25%),
+      linear-gradient(-45deg, rgba(34, 197, 94, 0.1) 25%, transparent 25%),
+      linear-gradient(45deg, transparent 75%, rgba(34, 197, 94, 0.1) 75%),
+      linear-gradient(-45deg, transparent 75%, rgba(34, 197, 94, 0.1) 75%);
+    background-size: 16px 16px;
+    background-position:
+      0 0,
+      0 8px,
+      8px -8px,
+      -8px 0px;
+  }
+
+  .minecraft-header {
+    @apply bg-gradient-to-r from-amber-600 to-orange-600 border-b-4 border-orange-700 text-white;
+    background-image:
+      linear-gradient(45deg, rgba(245, 158, 11, 0.2) 25%, transparent 25%),
+      linear-gradient(-45deg, rgba(245, 158, 11, 0.2) 25%, transparent 25%);
+    background-size: 12px 12px;
+  }
+
+  .minecraft-title {
+    @apply text-shadow-lg drop-shadow-md;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+
+  .minecraft-table {
+    @apply border-collapse border-spacing-0;
+  }
+
+  .minecraft-thead {
+    @apply bg-gradient-to-r from-stone-600 to-stone-700 text-white;
+  }
+
+  .minecraft-th {
+    @apply px-4 py-3 text-left font-bold border-2 border-stone-800 bg-stone-600;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+  }
+
+  .minecraft-tbody {
+    @apply bg-stone-50;
+  }
+
+  .minecraft-tr {
+    @apply hover:bg-stone-100 transition-colors duration-200 border-b-2 border-stone-300;
+  }
+
+  .minecraft-tr:nth-child(even) {
+    @apply bg-stone-50;
+  }
+
+  .minecraft-tr:nth-child(odd) {
+    @apply bg-white;
+  }
+
+  .minecraft-td {
+    @apply px-4 py-3 border-2 border-stone-300 font-medium;
+  }
+
+  .minecraft-sort-btn {
+    @apply text-white hover:text-yellow-300 hover:bg-stone-700 transition-colors duration-200 font-bold;
+  }
+
+  .minecraft-age-badge {
+    @apply bg-blue-600 hover:bg-blue-700 text-white font-bold px-3 py-1 rounded-full;
+  }
+
+  .minecraft-activity {
+    @apply text-sm text-stone-700 font-medium;
+  }
+
+  .minecraft-frequency-badge {
+    @apply text-white font-bold px-3 py-1 rounded-full text-sm;
+  }
+
+  .minecraft-premium-badge {
+    @apply text-white font-bold px-3 py-1 rounded-full text-sm;
+  }
+
+  .minecraft-version-badge {
+    @apply text-white font-bold px-3 py-1 rounded-full text-sm;
+  }
+
+  .minecraft-discord-badge {
+    @apply bg-indigo-600 hover:bg-indigo-700 text-white font-bold px-3 py-1 rounded-full text-sm;
+  }
+
+  .minecraft-minecraft-nick {
+    @apply text-sm font-mono bg-stone-200 px-2 py-1 rounded border-2 border-stone-400;
+  }
+
+  .minecraft-telegram {
+    @apply text-sm font-mono bg-blue-100 px-2 py-1 rounded border-2 border-blue-300 text-blue-800;
+  }
+}

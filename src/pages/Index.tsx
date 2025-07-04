@@ -1,11 +1,11 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import PlayersTable from "@/components/PlayersTable";
+import { playersData } from "@/data/playersData";
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4 color-black text-black">Добро пожаловать!</h1>
-        <p className="text-xl text-gray-600">тут будет отображаться ваш проект</p>
+    <div className="min-h-screen bg-gradient-to-br from-emerald-100 via-green-50 to-lime-100 p-4">
+      <div className="container mx-auto">
+        <PlayersTable players={playersData} />
       </div>
     </div>
   );
